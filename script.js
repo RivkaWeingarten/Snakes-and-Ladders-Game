@@ -5,25 +5,15 @@ boxNum=101
 container.forEach(element => {
    
     for (let i=1; i< 11; i++){
-        const img = document.createElement('img')
+        const div1 = document.createElement('div')
         boxNum--
         if (boxNum % 2){
-        img.style.backgroundColor='lightpink';
+        div1.style.backgroundColor='lightpink';
         }
-            img.setAttribute('id', boxNum)
-             img.value=boxNum
+            div1.setAttribute('id', boxNum)
+             div1.innerText=boxNum
              
-            element.appendChild(img)
+            element.appendChild(div1)
             }
    });
 
-function isOdd(num) { return num % 2;}
-
-// console.log(`${unsplashURL}${getRandomSize()}`)
-// function getRandomSize(){
-    // return `${getRandomNR()}x${getRandomNR()}`
-// }
-// function getRandomNR(){
-//     return Math.floor(Math.random()*10)+300
-
-// }
