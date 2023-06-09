@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+   margin: 0;
+   /* background-color:lightblue */
+   background-image: linear-gradient(to bottom, white,lightblue,lightpink);
+}
+.title{
+  margin:10px;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+max-width:1000px;
+}
+.container img{
+  object-fit: cover;
+  margin:1px;
+  height: 50px;
+  width:50px;
+  max-width:100%;
+  border: 5px;
+  background-color: rgba(0, 225, 255, 0.689);
+  color:navy;
+}
+
+
+.snakesBoard{
+  position:relative;
+}
+#snake1{
+  position: absolute;
+  width: 165px;
+  height: 155px;
+  left: 172px;
+  top: 101px;
+  }
+  
+#snake2{
+  position: absolute;
+  width: 175px;
+  height: 300px;
+  left: 11px;
+  top: 198px;
+  }
+
+  #snake3{
+    position: absolute;
+    width: 175px;
+    height: 155px;
+    left: 311px;
+    top: 361px;
+    }
+    #snake4{
+      position: absolute;
+      width: 125px;
+      height: 125px;
+      left: 319px;
+      top: 12px;
+      }
+  
+  #ladder1{
+    position: absolute;
+    width: 45px;
+    height: 175px;
+    left: 80px;
+    top: 335px;
+    transform: rotate(15deg)
+      }
+
+      #ladder2{
+        position: absolute;
+        width: 50px;
+        height: 225px;
+        left: 106px;
+        top: 25px;
+          }
+    
+          #ladder3{
+               position: absolute;
+    width: 45px;
+    height: 200px;
+    left: 372px;
+    top: 224px;
+    transform: rotate(150deg);
+}
+
+
+              
+              #ladder4{
+                position: absolute;
+                width: 50px;
+                height: 200px;
+                left: 389px;
+                top: 5px;
+                transform: rotate(10deg);
+            }
+            
+                  
+      #row10, #row8,#row6,#row4,#row2{
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+    
