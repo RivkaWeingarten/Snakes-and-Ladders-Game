@@ -26,7 +26,7 @@ function addCells() {
             if (boxNum % 2) {
                 div1.style.backgroundColor = 'lightpink';
             }
-            div1.setAttribute('id', boxNum)
+            div1.setAttribute('id','cell'+ boxNum)
             div1.innerText = boxNum
 
             element.appendChild(div1)
@@ -48,8 +48,27 @@ function addSnakeLadder(idName, imgUrl, alt, width, height, left, top, rotation)
     snakesBoard.appendChild(image1);
     return image1;
 }
+function createPlayer(color,player){
+    const homeCell=document.querySelector('#cell1')
+    const playerDot=document.createElement('div')
+    playerDot.setAttribute('id', player);
+    playerDot.style.height='20px';
+    playerDot.style.width='20px';
+    playerDot.style.borderRadius='50%';
+    playerDot.style.backgroundColor=color;
+    playerDot.style.boxShadow='5px 5px 10px rgba(0,0,0,0.7)';
+    playerDot.style.border='2px solid white';
+    playerDot.style.justifyContent='center'
+    homeCell.appendChild(playerDot)
+
+return playerDot
+
+}
+
 addRows()
 addCells()
+createPlayer('red','player1')
+createPlayer('blue','player2')
 addSnakeLadder('snake1', "assets/snake1.png", 'first snake', '165px', '155px', '172px', '101px', 0)
 addSnakeLadder('snake2', "assets/snake1.png", 'second snake', '175px', '300px', '11px', '198px', 0)
 addSnakeLadder('snake3', "assets/snake4.png", 'third snake', '175px', '155px', '311px', '361px', 0)
