@@ -65,6 +65,16 @@ return playerDot
 
 }
 
+const snakeData = [
+    {
+        idName: "snake1",
+        imgUrl: "",
+
+    },
+    {
+        idName: "snake2"
+    }
+]
 addRows()
 addCells()
 createPlayer('red','player1')
