@@ -19,7 +19,13 @@ body{
   margin:10px;
   text-align: center;
 }
-
+#header{
+  display:flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  width:900px;
+  justify-content:center;
+}
 .container{
   display: flex;
   align-items: center;

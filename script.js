@@ -28,6 +28,7 @@ function addCells() {
             }
             div1.setAttribute('id','cell'+ boxNum)
             div1.innerText = boxNum
+            
 
             element.appendChild(div1)
         }
@@ -59,6 +60,7 @@ function createPlayer(color,player){
     playerDot.style.boxShadow='5px 5px 10px rgba(0,0,0,0.7)';
     playerDot.style.border='2px solid white';
     playerDot.style.justifyContent='center'
+    playerDot.style.zIndex=1;
     homeCell.appendChild(playerDot)
 
 return playerDot
