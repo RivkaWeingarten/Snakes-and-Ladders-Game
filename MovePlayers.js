@@ -1,4 +1,7 @@
 console.log("hi from move");
+const scoreBoard =document.getElementById('header5')
+
+
 let red = {
   name: "player1",
   score: 0,
@@ -18,23 +21,16 @@ let blue = {
 // let startingCell = 0;
 // let score;
 let playerCh=player1
-function getScore(player){
- playerNumber=2
-  console.log (player.score)
-}
-getScore(red)
+
 
 function switchPlayer(){
 if (playerCh==='player1'){
   playerCh='player2'
-  playerNumber=2
   throwdice(blue,playerCh);
   }else{
   playerCh='player1'
-  playerNumber=1
   throwdice(red,playerCh);
   }
-  console.log('player='+playerCh+playerNumber)
 
   return playerCh
 }
@@ -45,8 +41,11 @@ function move(nextCellNum,playerCh) {
   const nextCell = document.querySelector("#cell" + nextCellNum);
 
   const playerChar = document.querySelector("#"+ playerCh);
-
+  const playerScore=document.querySelector('#score-'+ playerCh)
+ 
   nextCell.appendChild(playerChar);
+  playerScore.innerText = nextCellNum
+  playerScore.classList.add('active')
 }
 
 //https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop
@@ -68,13 +67,8 @@ const dice1 = document.getElementById('dice')
 console.log(dice1)
 dice1.addEventListener("click", (e) => {
   e.preventDefault();
-  
-  switchPlayer()
-
-
-
- 
-});
+   switchPlayer()
+ });
 
 function throwdice(player,playerCh) {
 
@@ -104,5 +98,6 @@ const positionsToMove=[];
   // console.log(score-startingCell +'numbers to move')
   // return player.destinationCell 
   player.startingCell=player.destinationCell
+  playerScore.classList.remove('active')
 }
 

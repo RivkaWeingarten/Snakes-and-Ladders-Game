@@ -1,5 +1,3 @@
-
-
 //refactored DRY
 const snakesBoard = document.querySelector('.snakesBoard')
 rownum = 11

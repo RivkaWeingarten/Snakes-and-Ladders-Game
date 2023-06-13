@@ -34,8 +34,15 @@ body{
 
 #scoreA,#scoreB{
     padding-right:43px;
-
-    
+    text-align: center;
+   
+}
+#score-player1, #score-player2{
+ font-weight: bolder;
+}
+.active {
+  background-color: steelblue;
+  color:white;
 }
 #scoreA{
   color:red;
@@ -44,6 +51,7 @@ body{
 #scoreB{
   color:blue;
 }
+
 
 #dice{
 margin:60px;
