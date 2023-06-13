@@ -19,13 +19,36 @@ body{
   margin:10px;
   text-align: center;
 }
-#header{
+.header5{
   display:flex;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
-  width:900px;
-  justify-content:center;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid pink;
+  padding-top: 5px;
+  margin-bottom: 20px;
+  box-shadow:7px 7px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;;
 }
+  /* margin-bottom: 10px; */
+
+
+#scoreA,#scoreB{
+    padding-right:43px;
+
+    
+}
+#scoreA{
+  color:red;
+}
+
+#scoreB{
+  color:blue;
+}
+
+#dice{
+margin:60px;
+}
+
 .container{
   display: flex;
   align-items: center;
