@@ -1,5 +1,6 @@
 //refactored DRY
 const snakesBoard = document.querySelector('.snakesBoard')
+
 rownum = 11
 function addRows() {
     for (let j = 11; j > 1; j--) {

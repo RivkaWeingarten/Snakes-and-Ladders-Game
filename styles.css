@@ -23,7 +23,7 @@ body{
   display:flex;
   align-items: center;
   justify-content: center;
-  border: 5px solid pink;
+  border: 5px solid rgb(11, 37, 187);
   padding-top: 5px;
   margin-bottom: 20px;
   box-shadow:7px 7px 5px rgba(0, 0, 0, 0.1);

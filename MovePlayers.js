@@ -1,6 +1,7 @@
 console.log("hi from move");
 const scoreBoard =document.getElementById('header5')
-
+const player1Score=document.getElementById('score-player1')
+const player2Score=document.getElementById('score-player2')
 
 let red = {
   name: "player1",
@@ -18,17 +19,20 @@ let blue = {
   playerNum: 2
   };
 
-// let startingCell = 0;
-// let score;
+
 let playerCh=player1
 
 
 function switchPlayer(){
 if (playerCh==='player1'){
   playerCh='player2'
+player2Score.classList.add('active')
+player1Score.classList.remove('active')
   throwdice(blue,playerCh);
   }else{
   playerCh='player1'
+  player1Score.classList.add('active')
+  player2Score.classList.remove('active')
   throwdice(red,playerCh);
   }
 
@@ -39,13 +43,12 @@ if (playerCh==='player1'){
 
 function move(nextCellNum,playerCh) {
   const nextCell = document.querySelector("#cell" + nextCellNum);
-
   const playerChar = document.querySelector("#"+ playerCh);
   const playerScore=document.querySelector('#score-'+ playerCh)
  
   nextCell.appendChild(playerChar);
   playerScore.innerText = nextCellNum
-  playerScore.classList.add('active')
+ 
 }
 
 //https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop
@@ -85,7 +88,6 @@ const positionsToMove=[];
       positionsToMove.forEach((position)=>{
         setTimeout(()=>{
           move(position,playerCh);
-
         },delay)
         delay+=300;
       })
@@ -98,6 +100,6 @@ const positionsToMove=[];
   // console.log(score-startingCell +'numbers to move')
   // return player.destinationCell 
   player.startingCell=player.destinationCell
-  playerScore.classList.remove('active')
+ 
 }
 
