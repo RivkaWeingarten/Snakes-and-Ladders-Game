@@ -12,8 +12,8 @@ body{
   justify-content: center;
   min-height: 100vh;
    margin: 0;
-   
-   background-image: linear-gradient(to bottom, white,lightblue,lightpink);
+   background-color: rgb(11, 176, 210);
+   /* background-image: linear-gradient(to bottom, white,lightblue,lightpink); */
 }
 .title{
   margin:10px;
@@ -22,47 +22,52 @@ body{
 .header5{
   display:flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border: 5px solid rgb(11, 37, 187);
   padding-top: 5px;
   margin-bottom: 25px;
   box-shadow:7px 7px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 25px;;
+  border-radius: 25px;
+  background-color: lightskyblue;
 }
   /* margin-bottom: 10px; */
 
 
-#scoreA,#scoreB{
-    padding-right:43px;
+#score1,#score2{
+    /* padding-right:43px; */
     text-align: center;
+    border:1px solid blue;
+    padding:10px;
    
 }
 #score-player1, #score-player2{
  font-weight: bolder;
+ font-size: 15px;
 }
 .active {
-  border:5px solid steelblue;
+  background-color: steelblue;
+  color:white;
   /* background-color: steelblue; */
-  color:red;
+  
 }
-#scoreA{
+#score1{
   color:red;
 }
 
-#scoreB{
+#score2{
   color:blue;
 }
 
 
 #dice{
 margin:5px;
-height:140px;
-width: 140px;
+height: 90px;px;
+width: 90px;
 border-radius:10px;
 background-color:blue;
 color:white;
 font-weight: bolder;
-font-size: 25px;
+font-size: 15px;
 }
 
 .container{
@@ -79,7 +84,7 @@ max-width:1000px;
   width:50px;
   max-width:100%;
   border: 5px;
-  background-color: rgba(0, 225, 255, 0.689);
+  background-color: rgba(0, 225, 255);
   color:navy;
   display:flex;
   justify-content: top-right;
