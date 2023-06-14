@@ -76,6 +76,7 @@ font-size: 15px;
   justify-content: center;
   flex-wrap: wrap;
 max-width:1000px;
+background-color: white;
 }
 .container div{
   object-fit: cover;
@@ -92,6 +93,7 @@ max-width:1000px;
   text-align: right;
   font-size: small;
   font-weight: bold;
+  border-radius: 7px;
 
 }
 

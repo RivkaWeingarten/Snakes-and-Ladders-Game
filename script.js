@@ -123,7 +123,7 @@ const snakeData = [
 
     {
         idName: "ladder2",
-        imgUrl: "assets/ladder1.png",
+        imgUrl: "assets/ladder transparent.png",
         alt:'second ladder', 
         width:'30px', 
         height:'225px', 
@@ -154,16 +154,7 @@ const snakeData = [
         rotation:10,
     }
 ]
-snakeData.forEach(snake=>addSnakeLadder(
-    snake.idName,
-    snake.imgUrl,
-    snake.alt,
-    snake.width,
-    snake.height,
-    snake.left,
-    snake.top,
-    snake.rotation
-))
+
 addRows()
 addCells()
 createPlayer('red','player1')
@@ -176,3 +167,14 @@ createPlayer('blue','player2')
 // addSnakeLadder('ladder2', "assets/ladder1.png", 'second ladder', '30px', '225px', '121px', '25px', 0)
 // addSnakeLadder('ladder3', "assets/ladder1.png", 'third ladder', '15px', '200px', '379px', '218px', 150)
 // addSnakeLadder('ladder4', "assets/ladder4.png", 'fourth ladder', '35px', '200px', '389px', '5px', 10)
+
+snakeData.forEach(snake=>addSnakeLadder(
+    snake.idName,
+    snake.imgUrl,
+    snake.alt,
+    snake.width,
+    snake.height,
+    snake.left,
+    snake.top,
+    snake.rotation
+))

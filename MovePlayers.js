@@ -46,21 +46,6 @@ function move(nextCellNum, playerCh) {
   playerScore.innerText = nextCellNum;
 }
 
-//https://stackoverflow.com/questions/3583724/how-do-i-add-a-delay-in-a-javascript-loop
-
-// let i = 35;
-// function moveAlong() {
-
-//   setTimeout(function () {
-//     move(i);
-//     if (i < 50) {
-//       moveAlong(i);
-//       i++;
-//     }
-//   }, 500);
-//  ;
-
-// }
 const dice1 = document.getElementById("dice");
 console.log(dice1);
 dice1.addEventListener("click", (e) => {
@@ -119,6 +104,7 @@ function throwdice(player, playerCh) {
   }
 
   if (player.destinationCell === 100) {
+    
     snakesBoard.style.display = "none";
     scoreBoard.style.display = "none";
 
