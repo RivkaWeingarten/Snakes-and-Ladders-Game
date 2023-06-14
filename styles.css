@@ -12,7 +12,7 @@ body{
   justify-content: center;
   min-height: 100vh;
    margin: 0;
-   background-color: rgb(11, 176, 210);
+   background-color: wheat
    /* background-image: linear-gradient(to bottom, white,lightblue,lightpink); */
 }
 .title{
@@ -91,6 +91,7 @@ max-width:1000px;
   /* align-items: center; */
   text-align: right;
   font-size: small;
+  font-weight: bold;
 
 }
 
@@ -102,11 +103,13 @@ max-width:1000px;
 
 
 /* #snake1{
-  position: absolute;
-  width: 165px;
-  height: 155px;
-  left: 172px;
-  top: 101px;
+ position: absolute;
+    height: 350px;
+    width: 200px;
+    left: 4px;
+    top: 221px;
+    transform: rotate(15deg);
+}
   } */
 /*   
 #snake2{

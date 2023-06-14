@@ -69,22 +69,110 @@ return playerDot
 const snakeData = [
     {
         idName: "snake1",
-        imgUrl: "",
-
+        imgUrl: "assets/snake4.png",
+        alt:'first snake', 
+        width:'165px', 
+        height:'155px', 
+        left:'172px', 
+        top:'101px', 
+        rotation:20,
     },
     {
-        idName: "snake2"
+        idName: "snake2",
+        imgUrl: "assets/snake4.png",
+        alt:'second snake', 
+        width:'175px', 
+        height:'221px', 
+        left:'11px', 
+        top:'198px', 
+        rotation:0,
+    },
+
+    {
+        idName: "snake3",
+        imgUrl: "assets/snake4.png",
+        alt:'third snake', 
+        width:'175px', 
+        height:'155px', 
+        left:'311px', 
+        top:'361px', 
+        rotation:0,
+    },
+
+    {
+        idName: "snake4",
+        imgUrl: "assets/snake4.png",
+        alt:'fourth snake', 
+        width:'125px', 
+        height:'125px', 
+        left:'319px', 
+        top:'12px', 
+        rotation:0,
+    },
+
+    {
+        idName: "ladder1",
+        imgUrl: "assets/ladder transparent.png",
+        alt:'first ladder', 
+        width:'200px', 
+        height:'350px', 
+        left:'4px', 
+        top:'221px', 
+        rotation:20,
+    },
+
+    {
+        idName: "ladder2",
+        imgUrl: "assets/ladder1.png",
+        alt:'second ladder', 
+        width:'30px', 
+        height:'225px', 
+        left:'121px', 
+        top:'25px', 
+        rotation:0,
+    },
+
+    {
+        idName: "ladder3",
+        imgUrl: "assets/ladder1.png",
+        alt:'third ladder', 
+        width:'15px', 
+        height:'200px', 
+        left:'379px', 
+        top:'218px', 
+        rotation:150,
+    },
+
+    {
+        idName: "ladder4",
+        imgUrl: "assets/ladder4.png",
+        alt:'fourth ladder', 
+        width:'35px', 
+        height:'200px', 
+        left:'389px', 
+        top:'5px', 
+        rotation:10,
     }
 ]
+snakeData.forEach(snake=>addSnakeLadder(
+    snake.idName,
+    snake.imgUrl,
+    snake.alt,
+    snake.width,
+    snake.height,
+    snake.left,
+    snake.top,
+    snake.rotation
+))
 addRows()
 addCells()
 createPlayer('red','player1')
 createPlayer('blue','player2')
-addSnakeLadder('snake1', "assets/snake4.png", 'first snake', '165px', '155px', '172px', '101px', 0)
-addSnakeLadder('snake2', "assets/snake4.png", 'second snake', '175px', '221px', '11px', '198px', 0)
-addSnakeLadder('snake3', "assets/snake4.png", 'third snake', '175px', '155px', '311px', '361px', 0)
-addSnakeLadder('snake4', "assets/snake4.png", 'fourth snake', '125px', '125px', '319px', '12px', 0)
-addSnakeLadder('ladder1', "assets/ladder1.png", 'first ladder', '45px', '175px', '80px', '335px', 15)
-addSnakeLadder('ladder2', "assets/ladder1.png", 'second ladder', '30px', '225px', '121px', '25px', 0)
-addSnakeLadder('ladder3', "assets/ladder1.png", 'third ladder', '15px', '200px', '379px', '218px', 150)
-addSnakeLadder('ladder4', "assets/ladder4.png", 'fourth ladder', '35px', '200px', '389px', '5px', 10)
+// addSnakeLadder('snake1', "assets/snake4.png", 'first snake', '165px', '155px', '172px', '101px', 0)
+// addSnakeLadder('snake2', "assets/snake4.png", 'second snake', '175px', '221px', '11px', '198px', 0)
+// addSnakeLadder('snake3', "assets/snake4.png", 'third snake', '175px', '155px', '311px', '361px', 0)
+// addSnakeLadder('snake4', "assets/snake4.png", 'fourth snake', '125px', '125px', '319px', '12px', 0)
+// addSnakeLadder('ladder1', "assets/ladder transparent.png", 'first ladder', '200px', '350px', '4px', '221px', 20)
+// addSnakeLadder('ladder2', "assets/ladder1.png", 'second ladder', '30px', '225px', '121px', '25px', 0)
+// addSnakeLadder('ladder3', "assets/ladder1.png", 'third ladder', '15px', '200px', '379px', '218px', 150)
+// addSnakeLadder('ladder4', "assets/ladder4.png", 'fourth ladder', '35px', '200px', '389px', '5px', 10)
