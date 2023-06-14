@@ -25,7 +25,7 @@ body{
   justify-content: center;
   border: 5px solid rgb(11, 37, 187);
   padding-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   box-shadow:7px 7px 5px rgba(0, 0, 0, 0.1);
   border-radius: 25px;;
 }
@@ -41,8 +41,9 @@ body{
  font-weight: bolder;
 }
 .active {
-  background-color: steelblue;
-  color:white;
+  border:5px solid steelblue;
+  /* background-color: steelblue; */
+  color:red;
 }
 #scoreA{
   color:red;
@@ -54,7 +55,14 @@ body{
 
 
 #dice{
-margin:60px;
+margin:5px;
+height:140px;
+width: 140px;
+border-radius:10px;
+background-color:blue;
+color:white;
+font-weight: bolder;
+font-size: 25px;
 }
 
 .container{
@@ -75,8 +83,10 @@ max-width:1000px;
   color:navy;
   display:flex;
   justify-content: top-right;
-  align-items: center;
+  /* align-items: center; */
   text-align: right;
+  font-size: small;
+
 }
 
 
