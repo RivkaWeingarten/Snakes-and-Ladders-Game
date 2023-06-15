@@ -29,6 +29,6 @@ snakeOrLadder='ladder'
 else{
   snakeOrLadder='snake'
 }
-
-return newDestination
+console.log(snakeOrLadder)
+// return newDestination
     }

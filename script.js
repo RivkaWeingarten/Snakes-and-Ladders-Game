@@ -159,15 +159,6 @@ addRows()
 addCells()
 createPlayer('red','player1')
 createPlayer('blue','player2')
-// addSnakeLadder('snake1', "assets/snake4.png", 'first snake', '165px', '155px', '172px', '101px', 0)
-// addSnakeLadder('snake2', "assets/snake4.png", 'second snake', '175px', '221px', '11px', '198px', 0)
-// addSnakeLadder('snake3', "assets/snake4.png", 'third snake', '175px', '155px', '311px', '361px', 0)
-// addSnakeLadder('snake4', "assets/snake4.png", 'fourth snake', '125px', '125px', '319px', '12px', 0)
-// addSnakeLadder('ladder1', "assets/ladder transparent.png", 'first ladder', '200px', '350px', '4px', '221px', 20)
-// addSnakeLadder('ladder2', "assets/ladder1.png", 'second ladder', '30px', '225px', '121px', '25px', 0)
-// addSnakeLadder('ladder3', "assets/ladder1.png", 'third ladder', '15px', '200px', '379px', '218px', 150)
-// addSnakeLadder('ladder4', "assets/ladder4.png", 'fourth ladder', '35px', '200px', '389px', '5px', 10)
-
 snakeData.forEach(snake=>addSnakeLadder(
     snake.idName,
     snake.imgUrl,
