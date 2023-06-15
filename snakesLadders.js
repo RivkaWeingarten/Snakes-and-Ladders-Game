@@ -11,7 +11,7 @@ const cell94=[94,87,74,73,72]
 function ladderSnake(playerCh,cellNumber){
 
 const snakesToMove=[];
-  for (let  k = 0; k<=cellNumber.length; k++){
+  for (let  k = 0; k<cellNumber.length; k++){
     snakesToMove.push(cellNumber[k])
     }
       let delay=0

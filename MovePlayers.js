@@ -58,18 +58,12 @@ function move(nextCellNum, playerCh) {
   const nextCell = document.querySelector("#cell" + nextCellNum);
   const playerChar = document.querySelector("#" + playerCh);
   const playerScore = document.querySelector("#score-" + playerCh);
-
+  console.log(playerChar + 'player ' + nextCellNum + 'cell')
   nextCell.appendChild(playerChar);
   playerScore.innerText = nextCellNum;
   
 }
 
-function reset(){
-  red.startingCell=0
-  blue.startingCell=0
-  red.destinationCell=0
-  blue.destinationCell=0
-}
 
 
 function throwdice(player, playerCh) {
@@ -154,3 +148,9 @@ reset()
 }
 
 
+function reset(){
+  red.startingCell=0
+  blue.startingCell=0
+  red.destinationCell=0
+  blue.destinationCell=0
+}
