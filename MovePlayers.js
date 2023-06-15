@@ -11,21 +11,21 @@ const player2Score = document.getElementById("score-player2");
 //it then defines destination cell which is starting cell plus the dice number
 //it moves the charachter one div at a time to the destination cell in function move
 //it also checks the destination number if it is a snake or a ladder then calls snakes snakesLadder.js which specifies the path of the snake or the ladder.
-//until one charachter wins.
+//until one character wins. character wins only when you hit 100 exactly.
 
 
 let red = {
   name: "player1",
   startingCell: 0,
   destinationCell: 0,
-  playerNum: 1,
+
 };
 
 let blue = {
   name: "player2",
   startingCell: 0,
   destinationCell: 0,
-  playerNum: 2,
+
 };
 
 let playerCh = player1;
@@ -61,34 +61,24 @@ function move(nextCellNum, playerCh) {
 
   nextCell.appendChild(playerChar);
   playerScore.innerText = nextCellNum;
+  
 }
 
+function reset(){
+  red.startingCell=0
+  blue.startingCell=0
+  red.destinationCell=0
+  blue.destinationCell=0
+}
 
 
 function throwdice(player, playerCh) {
   let diceNum = Math.floor(Math.random() * 6) + 1;
   DicePicture(diceNum);
+  DicePicture(diceNum);
   player.destinationCell = player.startingCell + diceNum;
 
   // player.destinationCell = newDestination
-  
-
- 
-  player.score = player.destinationCell;
-
-  const positionsToMove = [];
-  for (let k = player.startingCell + 1; k <= player.destinationCell; k++) {
-    positionsToMove.push(k);
-  }
-  let delay = 0;
-  positionsToMove.forEach((position) => {
-    setTimeout(() => {
-      move(position, playerCh);
-    }, delay);
-    delay += 300;
-  });
-
-  player.startingCell = player.destinationCell;
   if (player.destinationCell === 2) {
     ladderSnake(playerCh, cell2);
     player.startingCell = 38;
@@ -111,7 +101,7 @@ function throwdice(player, playerCh) {
   }
   if (player.destinationCell === 58) {
     ladderSnake(playerCh, cell58);
-    player.startingCell = 98;
+    player.startingCell = 83;
     player.destinationCell = newDestination;
   }
   if (player.destinationCell === 68) {
@@ -132,12 +122,35 @@ function throwdice(player, playerCh) {
   if (player.destinationCell > 100) {
     return;
   }
+
   if (player.destinationCell === 100) {
-    
     snakesBoard.style.display = "none";
     scoreBoard.style.display = "none";
-    header.innerText="WHOO HOO" + player.name +'WON!'
-    
+    header.innerText="WHOO HOO " + player.name +' WON!';
+    // document.body.style.backgroundColor='dark grey';
+    // document.style.color='white';
+  
+reset()
 
+  
       }
+
+    
+  player.score = player.destinationCell;
+
+  const positionsToMove = [];
+  for (let k = player.startingCell + 1; k <= player.destinationCell; k++) {
+    positionsToMove.push(k);
+  }
+  let delay = 0;
+  positionsToMove.forEach((position) => {
+    setTimeout(() => {
+      move(position, playerCh);
+    }, delay);
+    delay += 300;
+  });
+
+  player.startingCell = player.destinationCell;
 }
+
+

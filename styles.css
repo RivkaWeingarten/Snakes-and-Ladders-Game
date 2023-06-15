@@ -12,7 +12,8 @@ body{
   justify-content: center;
   min-height: 100vh;
    margin: 0;
-   background-color: wheat
+    
+  background-color: #e1e1e1;
    /* background-image: linear-gradient(to bottom, white,lightblue,lightpink); */
 }
 .title{
