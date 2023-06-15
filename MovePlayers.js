@@ -68,57 +68,18 @@ function move(nextCellNum, playerCh) {
 
 function throwdice(player, playerCh) {
   let diceNum = Math.floor(Math.random() * 6) + 1;
+ 
   DicePicture(diceNum);
-  DicePicture(diceNum);
+
   player.destinationCell = player.startingCell + diceNum;
 
   // player.destinationCell = newDestination
-  if (player.destinationCell === 2) {
-    ladderSnake(playerCh, cell2);
-    player.startingCell = 38;
-    player.destinationCell = 38;
-  }
-  else if (player.destinationCell === 27) {
-    ladderSnake(playerCh, cell27);
-    player.startingCell = 10;
-    player.destinationCell = 10;
-  }
-  else if (player.destinationCell === 29) {
-    ladderSnake(playerCh, cell29);
-    player.startingCell = 54;
-    player.destinationCell = 54;
-  }
- else if (player.destinationCell === 58) {
-    ladderSnake(playerCh, cell58);
-    player.startingCell = 83;
-    player.destinationCell = 83;
-  }
- else if (player.destinationCell === 60) {
-    ladderSnake(playerCh, cell60);
-    player.startingCell = 24;
-    player.destinationCell = 24;
-  }
-
- else if (player.destinationCell === 68) {
-    ladderSnake(playerCh, cell68);
-    player.startingCell = 92;
-    player.destinationCell = 92;
-  }
- else if (player.destinationCell === 77) {
-    ladderSnake(playerCh, cell77);
-    player.startingCell = 54;
-    player.destinationCell = 54;
-  }
-else  if (player.destinationCell === 94) {
-    ladderSnake(playerCh, cell2);
-    player.startingCell = 72;
-    player.destinationCell = 72;
-  }
- else if (player.destinationCell > 100) {
+ 
+   if (player.destinationCell > 100) {
     return;
   }
 
- if (player.destinationCell === 100) {
+ else if (player.destinationCell === 100) {
     snakesBoard.style.display = "none";
     scoreBoard.style.display = "none";
     header.innerText="WHOO HOO " + player.name +' WON!';
@@ -127,6 +88,53 @@ else  if (player.destinationCell === 94) {
   
 reset()
   
+      }
+
+      else  if (player.destinationCell === 94) {
+        ladderSnake(playerCh, cell94);
+        player.startingCell = 72;
+        player.destinationCell = 72;
+      }
+
+      else if (player.destinationCell === 77) {
+        ladderSnake(playerCh, cell77);
+        player.startingCell = 54;
+        player.destinationCell = 54;
+      }
+
+      else if (player.destinationCell === 68) {
+        ladderSnake(playerCh, cell68);
+        player.startingCell = 92;
+        player.destinationCell = 92;
+      }
+
+      else if (player.destinationCell === 60) {
+        ladderSnake(playerCh, cell60);
+        player.startingCell = 24;
+        player.destinationCell = 24;
+      }
+
+      else if (player.destinationCell === 58) {
+        ladderSnake(playerCh, cell58);
+        player.startingCell = 83;
+        player.destinationCell = 83;
+      }
+
+      else if (player.destinationCell === 29) {
+        ladderSnake(playerCh, cell29);
+        player.startingCell = 54;
+        player.destinationCell = 54;
+      }
+      else if (player.destinationCell === 27) {
+        ladderSnake(playerCh, cell27);
+        player.startingCell = 10;
+        player.destinationCell = 10;
+      }
+
+      if (player.destinationCell === 2) {
+        ladderSnake(playerCh, cell2);
+        player.startingCell = 38;
+        player.destinationCell = 38;
       }
 
 else{
