@@ -8,7 +8,22 @@ const cell68=[68,73,89,92]
 const cell77=[77,64,56,55,54]
 const cell94=[94,87,74,73,72]
 
+
 function ladderSnake(playerCh,cellNumber){
+
+let newDestination=cellNumber[cellNumber.length-1]
+let starting=cellNumber[0]
+
+if (newDestination >starting){
+  snakeOrLadder='ladder'
+   ladderSound.play()
+  
+}
+else{
+  snakeOrLadder='snake'
+snakeSound.play()
+}
+
 
 const snakesToMove=[];
   for (let  k = 0; k<cellNumber.length; k++){
@@ -22,13 +37,7 @@ const snakesToMove=[];
         delay+=200;
       })
 
-let newDestination=cellNumber[cellNumber.length-1]
-let starting=cellNumber[0]
-if (newDestination >starting)
-snakeOrLadder='ladder'
-else{
-  snakeOrLadder='snake'
-}
+
 console.log(snakeOrLadder)
 // return newDestination
-    }
+}

@@ -4,91 +4,100 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Muli', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-   margin: 0;
-    
+  margin: 0;
   background-color: #e1e1e1;
-   /* background-image: linear-gradient(to bottom, white,lightblue,lightpink); */
+
 }
-.title{
-  margin:10px;
+
+.title {
+  margin: 10px;
   text-align: center;
 }
-.header5{
-  display:flex;
+
+.header5 {
+  display: flex;
   align-items: center;
   justify-content: space-evenly;
   border: 5px solid rgb(11, 37, 187);
   padding-top: 5px;
   margin-bottom: 25px;
-  box-shadow:7px 7px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
-  background-color: lightskyblue;
+
 }
-  /* margin-bottom: 10px; */
+
+/* margin-bottom: 10px; */
 
 
-#score1,#score2{
-    /* padding-right:43px; */
-    text-align: center;
-    border:1px solid blue;
-    padding:10px;
-   
+#score1,
+#score2 {
+  text-align: center;
+  border: 1px solid blue;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.1);
+
 }
-#score-player1, #score-player2{
- font-weight: bolder;
- font-size: 15px;
+
+#score-player1,
+#score-player2 {
+  font-weight: bolder;
+  font-size: 15px;
 }
+
 .active {
   background-color: steelblue;
-  color:white;
-  /* background-color: steelblue; */
-  
-}
-#score1{
-  color:red;
+  color: white;
 }
 
-#score2{
-  color:blue;
+#score1 {
+  color: red;
+}
+
+#score2 {
+  color: blue;
 }
 
 
-#dice{
-margin:5px;
-height: 90px;px;
-width: 90px;
-border-radius:10px;
-background-color:blue;
-color:white;
-font-weight: bolder;
-font-size: 15px;
+#dice {
+  margin: 5px;
+  height: 90px;
+  px;
+  width: 90px;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
 }
 
-.container{
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-max-width:1000px;
-background-color: white;
+  max-width: 1000px;
+  background-color: white;
 }
-.container div{
+
+.container div {
   object-fit: cover;
-  margin:1px;
+  margin: 1px;
   height: 50px;
-  width:50px;
-  max-width:100%;
+  width: 50px;
+  max-width: 100%;
   border: 5px;
   background-color: rgba(0, 225, 255);
-  color:navy;
-  display:flex;
+  color: navy;
+  display: flex;
   justify-content: top-right;
   /* align-items: center; */
   text-align: right;
@@ -99,86 +108,44 @@ background-color: white;
 }
 
 
-.snakesBoard{
-  position:relative;
-  box-shadow:5px 5px 7px rgba(0,0,0,0.1);
+.snakesBoard {
+  position: relative;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
 }
 
-
-/* #snake1{
- position: absolute;
-    height: 350px;
-    width: 200px;
-    left: 4px;
-    top: 221px;
-    transform: rotate(15deg);
-}
-  } */
-/*   
-#snake2{
+#play-again {
   position: absolute;
-  width: 175px;
-  height: 300px;
-  left: 11px;
-  top: 198px;
-  } */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: white;
+  border: white solid .2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 15rem;
+  padding: 1.5rem;
+  text-transform: uppercase;
+}
 
-  /* #snake3{
-    position: absolute;
-    width: 175px;
-    height: 155px;
-    left: 311px;
-    top: 361px;
-    } */
-    /* #snake4{
-      position: absolute;
-      width: 125px;
-      height: 125px;
-      left: 319px;
-      top: 12px;
-      } */
-  
-  /* #ladder1{
-    position: absolute;
-    width: 45px;
-    height: 175px;
-    left: 80px;
-    top: 335px;
-    transform: rotate(15deg)
-      } */
+.hidden {
+  display: none;
+}
 
-      /* #ladder2{
-        position: absolute;
-        width: 50px;
-        height: 225px;
-        left: 106px;
-        top: 25px;
-          } */
-/*     
-          #ladder3{
-               position: absolute;
-    width: 45px;
-    height: 200px;
-    left: 372px;
-    top: 224px;
-    transform: rotate(150deg);
-} */
-
-
-              
-              /* #ladder4{
-                position: absolute;
-                width: 50px;
-                height: 200px;
-                left: 389px;
-                top: 5px;
-                transform: rotate(10deg);
-            } */
-            
-                  
-      #row1, #row3,#row5,#row7,#row9{
-        display: flex;
-        flex-direction: row-reverse;
-      }
-
-    
+#row1,
+#row3,
+#row5,
+#row7,
+#row9 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.winner{
+  left:0;
+  background:url('https://worldinsidepictures.com/wp-content/uploads/2020/09/close-up-of-purple-cosmos-blooming-outdoors-royalty-free-image-771586669-1542676640.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

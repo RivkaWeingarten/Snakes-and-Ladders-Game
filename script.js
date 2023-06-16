@@ -1,5 +1,17 @@
 //refactored DRY
 const snakesBoard = document.querySelector('.snakesBoard')
+const resetButton=document.createElement('button')
+
+resetButton.innerText='Replay'
+document.body.appendChild(resetButton)
+resetButton.style.backgroundColor='blue'
+resetButton.style.color='white'
+resetButton.addEventListener('click',(e)=>{
+   e.preventDefault 
+   reset()
+   location.reload()
+}
+    )
 
 rownum = 11
 function addRows() {
