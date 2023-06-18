@@ -9,24 +9,18 @@ const cell77=[77,64,56,55,54]
 const cell94=[94,87,74,73,72]
 
 
-function ladderSnake(playerCh,cellNumber){
+function ladderSnake(playerCh,cellNumber,messageUrl){
 
 let newDestination=cellNumber[cellNumber.length-1]
 let starting=cellNumber[0]
 
-if (newDestination >starting){
-  snakeOrLadder='ladder'
-   ladderSound.play()
-  
-}
-else{
-  snakeOrLadder='snake'
-snakeSound.play()
-}
+
+
+
 
 
 const snakesToMove=[];
-  for (let  k = 0; k<cellNumber.length; k++){
+for (let  k = 0; k<cellNumber.length; k++){
     snakesToMove.push(cellNumber[k])
     }
       let delay=0
@@ -36,8 +30,40 @@ const snakesToMove=[];
         },delay)
         delay+=200;
       })
+      if (newDestination >starting){
+        snakeOrLadder='ladder'
+         ladderSound.play()
+      }
+        
+      else{
+        snakeOrLadder='snake'
+        snakeSound.play()
+      }
 
-
-console.log(snakeOrLadder)
+setTimeout(()=>{
+  addMessage(messageUrl)
+},1000)
+     
 // return newDestination
 }
+
+
+//add message img
+function addMessage(messageUrl){
+  const messageImage=document.createElement('img')
+  messageImage.src=messageUrl
+  snakesBoard.classList.add('show')
+  messageImage.classList.add('snake-ladder-image')
+
+  snakesBoard.appendChild(messageImage)
+}
+
+function removeMessage(){
+  const imageToRemove=document.querySelectorAll('.snake-ladder-image')
+
+    imageToRemove.forEach(image=> {
+    image.style.display='none'
+   
+    })
+  }
+    

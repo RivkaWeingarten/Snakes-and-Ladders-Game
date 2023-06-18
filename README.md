@@ -10,3 +10,13 @@ Also positioned all the elements via CSS.
 source for Dice images
 
 https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
+
+PHOTO OF CLOCK
+
+Photo by <a href="https://unsplash.com/@kiranck123?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kiran CK</a> on <a href="https://unsplash.com/images/things/clock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+
+photo of break time
+
+https://depositphotos.com/111864308/stock-photo-note-with-brake-time-inscription.html
+author: roobcio

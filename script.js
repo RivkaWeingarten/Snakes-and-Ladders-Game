@@ -1,6 +1,13 @@
 //refactored DRY
 const snakesBoard = document.querySelector('.snakesBoard')
+const messageBoard = document.querySelector('#message-pic')
 const resetButton=document.createElement('button')
+const scoreBoard = document.querySelector(".header5");
+const header = document.querySelector("h1");
+const player1Score = document.getElementById("score1");
+const player2Score = document.getElementById("score2");
+const ladderSound=document.getElementById('ohYeah')
+const snakeSound=document.getElementById('ohNo')
 
 resetButton.innerText='Replay'
 document.body.appendChild(resetButton)

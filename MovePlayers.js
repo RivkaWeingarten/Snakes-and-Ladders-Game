@@ -1,12 +1,5 @@
 
-const scoreBoard = document.querySelector(".header5");
-const header = document.querySelector("h1");
-const player1Score = document.getElementById("score1");
-const player2Score = document.getElementById("score2");
 
-// const snakeSound =document.getElementById('ohNo').play()
-const ladderSound=document.getElementById('ohYeah')
-const snakeSound=document.getElementById('ohNo')
 
 
 
@@ -24,16 +17,18 @@ const snakeSound=document.getElementById('ohNo')
 
 
 let red = {
-  name: "player1",
+  name: "RED",
   startingCell: 0,
   destinationCell: 0,
+  color: 'red'
 
 };
 
 let blue = {
-  name: "player2",
+  name: "BLUE",
   startingCell: 0,
   destinationCell: 0,
+  color:'blue'
 
 };
 
@@ -44,7 +39,9 @@ const dice1 = document.getElementById("dice");
 console.log(dice1);
 dice1.addEventListener("click", (e) => {
   e.preventDefault();
+    removeMessage()
   switchPlayer();
+
 });
 
 function switchPlayer() {
@@ -89,10 +86,13 @@ function throwdice(player, playerCh) {
   }
 
  else if (player.destinationCell === 100) {
-    snakesBoard.style.display = "none";
+    // snakesBoard.style.display = "none";
     scoreBoard.style.display = "none";
-    header.innerText="WHOO HOO " + player.name +' WON!';
+    header.innerText=player.name +' WON!';
+    header.style.color=player.color
     const winningSound =document.getElementById('tada').play ()
+    messageUrl='./assets/winner.png'
+    addMessage(messageUrl)
     // document.body.style.backgroundColor='dark grey';
     // document.style.color='white';
   
@@ -101,56 +101,57 @@ reset()
       }
 
       else  if (player.destinationCell === 94) {
-       
-        ladderSnake(playerCh, cell94);
+        messageUrl='./assets/message-slide4.png'
+        ladderSnake(playerCh, cell94,messageUrl);
         player.startingCell = 72;
         player.destinationCell = 72;
-      }
+   
+              }
 
       else if (player.destinationCell === 77) {
-        
-        ladderSnake(playerCh, cell77);
+        messageUrl='./assets/message-slide3.png'
+        ladderSnake(playerCh, cell77,messageUrl);
         player.startingCell = 54;
         player.destinationCell = 54;
       }
 
       else if (player.destinationCell === 68) {
-        
-        ladderSnake(playerCh, cell68);
+        messageUrl='./assets/message-ladder4.png'
+        ladderSnake(playerCh, cell68,messageUrl);
         player.startingCell = 92;
         player.destinationCell = 92;
       }
 
       else if (player.destinationCell === 60) {
-        
-        ladderSnake(playerCh, cell60);
+        messageUrl='./assets/message-slide2.png'
+        ladderSnake(playerCh, cell60,messageUrl);
         player.startingCell = 24;
         player.destinationCell = 24;
       }
 
       else if (player.destinationCell === 58) {
-        
-        ladderSnake(playerCh, cell58);
+        messageUrl='./assets/message-ladder3.png'
+        ladderSnake(playerCh, cell58,messageUrl);
         player.startingCell = 83;
         player.destinationCell = 83;
       }
 
       else if (player.destinationCell === 29) {
-        
-        ladderSnake(playerCh, cell29);
+        messageUrl='./assets/message-ladder2.png'
+        ladderSnake(playerCh, cell29,messageUrl);
         player.startingCell = 54;
         player.destinationCell = 54;
       }
       else if (player.destinationCell === 27) {
-     
-        ladderSnake(playerCh, cell27);
+        messageUrl='./assets/message-slide1.png'
+        ladderSnake(playerCh, cell27,messageUrl);
         player.startingCell = 10;
         player.destinationCell = 10;
       }
 
       if (player.destinationCell === 2) {
-        const ladderSound =document.getElementById('ohYeah').play ()
-        ladderSnake(playerCh, cell2);
+        messageUrl='./assets/message-ladder1.png'
+        ladderSnake(playerCh, cell2,messageUrl);
         player.startingCell = 38;
         player.destinationCell = 38;
       }
