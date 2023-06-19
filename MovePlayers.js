@@ -44,7 +44,6 @@ function switchPlayer() {
     player2Score.classList.remove("active");
     throwdice(red, playerCh);
   }
-  console.log(playerCh);
   return playerCh;
 }
 
@@ -52,7 +51,7 @@ function move(nextCellNum, playerCh) {
   const nextCell = document.querySelector("#cell" + nextCellNum);
   const playerChar = document.querySelector("#" + playerCh);
   const playerScore = document.querySelector("#score-" + playerCh);
-  console.log(playerCh + "player " + nextCellNum + "cell");
+
   nextCell.appendChild(playerChar);
   playerScore.innerText = nextCellNum;
 }

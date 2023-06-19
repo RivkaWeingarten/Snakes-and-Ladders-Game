@@ -42,7 +42,8 @@ function addCells() {
             const div1 = document.createElement('div')
             boxNum--
             if (boxNum % 2) {
-                div1.style.backgroundColor = 'lightpink';
+                div1.style.backgroundColor = '#65b6e0';
+                // div1.style.color='white';
             }
             div1.setAttribute('id','cell'+ boxNum)
             div1.innerText = boxNum
