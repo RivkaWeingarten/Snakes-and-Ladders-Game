@@ -7,10 +7,6 @@ let newDestination=cellNumber[cellNumber.length-1]
 let starting=cellNumber[0]
 
 
-
-
-
-
 const snakesToMove=[];
 for (let  k = 0; k<cellNumber.length; k++){
     snakesToMove.push(cellNumber[k])
@@ -36,7 +32,7 @@ setTimeout(()=>{
   addMessage(messageUrl)
 },1000)
      
-// return newDestination
+
 }
 
 
@@ -46,16 +42,13 @@ function addMessage(messageUrl){
   messageImage.src=messageUrl
   snakesBoard.classList.add('show')
   messageImage.classList.add('snake-ladder-image')
-
   snakesBoard.appendChild(messageImage)
 }
 
 function removeMessage(){
   const imageToRemove=document.querySelectorAll('.snake-ladder-image')
-
     imageToRemove.forEach(image=> {
     image.style.display='none'
-   
-    })
+       })
   }
     
