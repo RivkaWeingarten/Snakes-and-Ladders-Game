@@ -90,11 +90,16 @@ const snakeData = [
         idName: "snake1",
         imgUrl: "assets/snake4.png",
         alt:'first snake', 
-        width:'165px', 
+        width:'175px', 
         height:'155px', 
-        left:'172px', 
-        top:'101px', 
+        left:'311px', 
+        top:'361px', 
         rotation:0,
+        pathArray:[27,14,7,8,9,10],
+        messageImage:'./assets/message-snake1.png',
+        startingCell:27,
+        destinationCell:10,
+
     },
     {
         idName: "snake2",
@@ -105,20 +110,27 @@ const snakeData = [
         left:'11px', 
         top:'198px', 
         rotation:0,
+        pathArray:[60,41,40,21,22,23,24],
+        messageImage:'./assets/message-snake2.png',
+        startingCell:60,
+        destinationCell:24,
     },
-
     {
         idName: "snake3",
         imgUrl: "assets/snake4.png",
         alt:'third snake', 
-        width:'175px', 
+        width:'165px', 
         height:'155px', 
-        left:'311px', 
-        top:'361px', 
+        left:'172px', 
+        top:'101px', 
         rotation:0,
+        pathArray:[77,64,56,55,54],
+        messageImage:'./assets/message-snake3.png',
+        startingCell:77,
+        destinationCell:54,
     },
 
-    {
+     {
         idName: "snake4",
         imgUrl: "assets/snake4.png",
         alt:'fourth snake', 
@@ -127,6 +139,10 @@ const snakeData = [
         left:'319px', 
         top:'12px', 
         rotation:0,
+        pathArray:[94,87,74,73,72],
+        messageImage:'./assets/message-snake4.png',
+        startingCell:94,
+        destinationCell:72,
     },
 
     {
@@ -138,29 +154,42 @@ const snakeData = [
         left:'4px', 
         top:'221px', 
         rotation:20,
+        pathArray:[2,19,23,38],
+        messageImage:'./assets/message-ladder1.png',
+        startingCell:2,
+        destinationCell:38,
     },
 
+ 
     {
         idName: "ladder2",
         imgUrl: "assets/ladder transparent.png",
         alt:'second ladder', 
-        width: '150px',
-        height: '321px',
-        left: '60px',
-        top: '-28px',
-        rotation:0,
-    },
-
-    {
-        idName: "ladder3",
-        imgUrl: "assets/ladder transparent.png",
-        alt:'third ladder', 
         width:'145px', 
         height:'370px', 
         left:'300px', 
         top:'114px', 
         rotation:-35,
+        pathArray:[29,33,47,54],
+        messageImage:'./assets/message-ladder2.png',
+        startingCell:29,
+        destinationCell:54,
     },
+    {
+        idName: "ladder3",
+        imgUrl: "assets/ladder transparent.png",
+        alt:'third ladder', 
+        width: '150px',
+        height: '321px',
+        left: '60px',
+        top: '-28px',
+        rotation:0,
+        pathArray:[58,63,78,83],
+        messageImage:'./assets/message-ladder3.png',
+        startingCell:58,
+        destinationCell:83,
+    },
+
 
     {
         idName: "ladder4",
@@ -171,6 +200,10 @@ const snakeData = [
         left:'378px', 
         top:'-92px', 
         rotation:22,
+        pathArray:[68,73,89,92],
+        messageImage:'./assets/message-ladder4.png',
+        startingCell:68,
+        destinationCell:92,
     }
 ]
 
