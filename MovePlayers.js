@@ -14,7 +14,7 @@
 //it moves the charachter one div at a time to the destination cell in function move
 //it also checks the destination number if it is a snake or a ladder then calls snakes snakesLadder.js which specifies the path of the snake or the ladder.
 //until one character wins. character wins only when it  hits 100 exactly . (e.g if charachter is on box 99 and dice=6 it will remain on box 99 until it gets a dice =1)
-
+const snakeOrLadderDestination= [2,27,29,58,60,68,77,94]
 
 let red = {
   name: "RED",
@@ -71,7 +71,6 @@ function move(nextCellNum, playerCh) {
 }
 
 
-
 function throwdice(player, playerCh) {
   let diceNum = Math.floor(Math.random() * 6) + 1;
  
@@ -79,11 +78,23 @@ function throwdice(player, playerCh) {
 
   player.destinationCell = player.startingCell + diceNum;
 
-  // player.destinationCell = newDestination
- 
+  // snakeData.destinationCell.find(player.destinationCell)
+  let selectedPoint= snakeData.find(point => point.pathArray[0] === player.destinationCell)
+
+if (selectedPoint){
+let {pathArray, destinationCell, messageImage }=selectedPoint
+console.log('path', pathArray,);
+console.log('destination',destinationCell)
+console.log('messageURL',messageImage)
+}
+else{
+  console.log('not a snake or a ladder')
+}
+
    if (player.destinationCell > 100) {
     return;
   }
+
 
  else if (player.destinationCell === 100) {
     // snakesBoard.style.display = "none";

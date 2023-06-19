@@ -97,7 +97,7 @@ const snakeData = [
         rotation:0,
         pathArray:[27,14,7,8,9,10],
         messageImage:'./assets/message-snake1.png',
-        startingCell:27,
+        startingCell:10,
         destinationCell:10,
 
     },
@@ -112,7 +112,7 @@ const snakeData = [
         rotation:0,
         pathArray:[60,41,40,21,22,23,24],
         messageImage:'./assets/message-snake2.png',
-        startingCell:60,
+        startingCell:24,
         destinationCell:24,
     },
     {
@@ -126,7 +126,7 @@ const snakeData = [
         rotation:0,
         pathArray:[77,64,56,55,54],
         messageImage:'./assets/message-snake3.png',
-        startingCell:77,
+        startingCell:54,
         destinationCell:54,
     },
 
@@ -141,7 +141,7 @@ const snakeData = [
         rotation:0,
         pathArray:[94,87,74,73,72],
         messageImage:'./assets/message-snake4.png',
-        startingCell:94,
+        startingCell:72,
         destinationCell:72,
     },
 
@@ -156,7 +156,7 @@ const snakeData = [
         rotation:20,
         pathArray:[2,19,23,38],
         messageImage:'./assets/message-ladder1.png',
-        startingCell:2,
+        startingCell:38,
         destinationCell:38,
     },
 
@@ -172,7 +172,7 @@ const snakeData = [
         rotation:-35,
         pathArray:[29,33,47,54],
         messageImage:'./assets/message-ladder2.png',
-        startingCell:29,
+        startingCell:54,
         destinationCell:54,
     },
     {
@@ -186,7 +186,7 @@ const snakeData = [
         rotation:0,
         pathArray:[58,63,78,83],
         messageImage:'./assets/message-ladder3.png',
-        startingCell:58,
+        startingCell:83,
         destinationCell:83,
     },
 
@@ -202,7 +202,7 @@ const snakeData = [
         rotation:22,
         pathArray:[68,73,89,92],
         messageImage:'./assets/message-ladder4.png',
-        startingCell:68,
+        startingCell:92,
         destinationCell:92,
     }
 ]
