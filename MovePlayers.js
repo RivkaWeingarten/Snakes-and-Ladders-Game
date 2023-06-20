@@ -23,7 +23,7 @@ let blue = {
 };
 
 let playerCh = player1;
-
+//user clicks the button
 const dice1 = document.getElementById("dice");
 console.log(dice1);
 dice1.addEventListener("click", (e) => {
@@ -46,7 +46,7 @@ function switchPlayer() {
   }
   return playerCh;
 }
-
+//this moves a single cell
 function move(nextCellNum, playerCh) {
   const nextCell = document.querySelector("#cell" + nextCellNum);
   const playerChar = document.querySelector("#" + playerCh);
@@ -62,13 +62,17 @@ function throwdice(player, playerCh) {
   DicePicture(diceNum);
 
   player.destinationCell = player.startingCell + diceNum;
-
+ 
+  const positionsToMove = [];
+  for (let k = player.startingCell + 1; k <= player.destinationCell; k++) {
+    positionsToMove.push(k);
+      }
   // player needs EXACTLY 100 to win
   if (player.destinationCell > 100) {
   error.play()
     return;
   }
-  //PLAYER WON
+
  
   // FIND SNAKE OR LADDER (DRY)
   let selectedPoint = snakeData.find(
@@ -79,25 +83,25 @@ function throwdice(player, playerCh) {
     ladderSnake(playerCh, pathArray, messageImage);
     player.startingCell = destinationCell;
     player.destinationCell = destinationCell;
+    path=pathArray
   } else {
-    pathArray=[]
+    path=[]
     player.score = player.destinationCell;
+  }
+    combinedMove=positionsToMove.concat(path)
 
-    const positionsToMove = [];
-    for (let k = player.startingCell + 1; k <= player.destinationCell; k++) {
-      positionsToMove.push(k);
-        }
-       
+   console.log(combinedMove)
+
     let delay = 0;
-    positionsToMove.forEach((position) => {
+    combinedMove.forEach((position) => {
       setTimeout(() => {
         move(position, playerCh);
       }, delay);
-      delay += 300;
+      delay += 200;
     });
 
     player.startingCell = player.destinationCell;
-  }
+  
 
   if (player.destinationCell === 100) {
     scoreBoard.style.display = "none";

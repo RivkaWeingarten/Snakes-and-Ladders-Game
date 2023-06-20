@@ -6,18 +6,18 @@ function ladderSnake(playerCh,cellNumber,messageUrl){
 let newDestination=cellNumber[cellNumber.length-1]
 let starting=cellNumber[0]
 
-
-const snakesToMove=[];
-for (let  k = 0; k<cellNumber.length; k++){
-    snakesToMove.push(cellNumber[k])
-    }
-      let delay=0
-      snakesToMove.forEach((cell)=>{
-        setTimeout(()=>{
-          move(cell,playerCh);
-        },delay)
-        delay+=200;
-      })
+console.log(playerCh)
+// const snakesToMove=[];
+// for (let  k = 0; k<cellNumber.length; k++){
+//     snakesToMove.push(cellNumber[k])
+//     }
+//       let delay=0
+//       snakesToMove.forEach((cell)=>{
+//         setTimeout(()=>{
+//           move(cell,playerCh);
+//         },delay)
+//         delay+=200;
+//       })
       if (newDestination >starting){
         snakeOrLadder='ladder'
          ladderSound.play()
@@ -30,7 +30,7 @@ for (let  k = 0; k<cellNumber.length; k++){
 
 setTimeout(()=>{
   addMessage(messageUrl)
-},1000)
+},1400)
      
 
 }

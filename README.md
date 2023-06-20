@@ -28,15 +28,13 @@ Which decides which DICE picture to display based on random number
 
 It then defines destination cell (starting cell plus dice number)
 
-it moves the charachter one div at a time to the destination cell in function move
+it moves the character one div at a time to the destination cell in function move
 
 Program checks the destination number if it is a snake or a ladder then calls snakes snakesLadder.js which specifies the path of the snake or the ladder.
 
 When player lands on a snake or a ladder, an image is shown and a sound is played. (all defined in array called snakeData in script.js)
 The game continues until one character wins. Character wins only when it  hits 100 exactly . 
 (e.g if character is on box 99 and dice=6 it will remain on box 99 until it gets a dice =1)
-
-
 
 source for Dice images
 
