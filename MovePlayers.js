@@ -64,18 +64,11 @@ function throwdice(player, playerCh) {
   player.destinationCell = player.startingCell + diceNum;
   // player needs EXACTLY 100 to win
   if (player.destinationCell > 100) {
-    return;
+  errorSound.play() 
+     return;
   }
   //PLAYER WON
-  else if (player.destinationCell === 100) {
-    scoreBoard.style.display = "none";
-    header.innerText = player.name + " WON!";
-    header.style.color = player.color;
-    const winningSound = document.getElementById("tada").play();
-    messageUrl = "./assets/winner.png";
-    addMessage(messageUrl);
-    reset();
-  }
+ 
   // FIND SNAKE OR LADDER (DRY)
   let selectedPoint = snakeData.find(
     (point) => point.pathArray[0] === player.destinationCell
@@ -86,12 +79,14 @@ function throwdice(player, playerCh) {
     player.startingCell = destinationCell;
     player.destinationCell = destinationCell;
   } else {
+    pathArray=[]
     player.score = player.destinationCell;
 
     const positionsToMove = [];
     for (let k = player.startingCell + 1; k <= player.destinationCell; k++) {
       positionsToMove.push(k);
-    }
+        }
+       
     let delay = 0;
     positionsToMove.forEach((position) => {
       setTimeout(() => {
@@ -101,6 +96,16 @@ function throwdice(player, playerCh) {
     });
 
     player.startingCell = player.destinationCell;
+  }
+
+  if (player.destinationCell === 100) {
+    scoreBoard.style.display = "none";
+    header.innerText = player.name + " WON!";
+    header.style.color = player.color;
+    const winningSound = document.getElementById("tada").play();
+    messageUrl = "./assets/winner.png";
+    addMessage(messageUrl);
+    reset();
   }
   diceNum = 0;
 

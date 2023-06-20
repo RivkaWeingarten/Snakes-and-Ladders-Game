@@ -8,8 +8,9 @@ const player1Score = document.getElementById("score1");
 const player2Score = document.getElementById("score2");
 const ladderSound=document.getElementById('ohYeah')
 const snakeSound=document.getElementById('ohNo')
+const errorSound=document.getElementById('error')
 
-resetButton.innerText='Replay'
+resetButton.innerText='Play Again'
 document.body.appendChild(resetButton)
 resetButton.style.backgroundColor='blue'
 resetButton.style.color='white'
