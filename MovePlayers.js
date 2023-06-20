@@ -62,10 +62,11 @@ function throwdice(player, playerCh) {
   DicePicture(diceNum);
 
   player.destinationCell = player.startingCell + diceNum;
+
   // player needs EXACTLY 100 to win
   if (player.destinationCell > 100) {
-  errorSound.play() 
-     return;
+  error.play()
+    return;
   }
   //PLAYER WON
  
