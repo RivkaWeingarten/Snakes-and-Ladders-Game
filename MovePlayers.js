@@ -62,19 +62,18 @@ function throwdice(player, playerCh) {
   DicePicture(diceNum); //calls for dice picture
 
   player.destinationCell = player.startingCell + diceNum; //determines landing cell
- 
+
   //creates an array of cells that need to be moved e.g. [1,2,3]
   const positionsToMove = [];
   for (let k = player.startingCell + 1; k <= player.destinationCell; k++) {
     positionsToMove.push(k);
-      }
+  }
   // checks if landing cell is over 100, then plays error sound
   if (player.destinationCell > 100) {
-  error.play()
+    error.play();
     return;
   }
 
- 
   // checks if SNAKE OR LADDER (DRY) checks snakeData on script.js
   let selectedPoint = snakeData.find(
     (point) => point.pathArray[0] === player.destinationCell
@@ -82,52 +81,46 @@ function throwdice(player, playerCh) {
   //if it is a snake or ladder, it determines pathArray starting cell and destination cell from snakeData
   if (selectedPoint) {
     let { pathArray, destinationCell, messageImage } = selectedPoint;
-    ladderSnake(pathArray, messageImage,diceNum);
+    ladderSnake(pathArray, messageImage, diceNum);
     player.startingCell = destinationCell;
     player.destinationCell = destinationCell;
-    path=pathArray
+    path = pathArray;
   } else {
-    path=[]
+    path = [];
     player.score = player.destinationCell;
   }
 
   //if player wins
   if (player.destinationCell === 100) {
-   
-   
-    // const winningSound = document.getElementById("tada").play();
-    messageImage = "./assets/winner.png";
-   
-    setTimeout(()=>{
-      addMessage(messageImage)
-      winnerSound.play()
+    messageImage = "./assets/Winner.png";
+
+    setTimeout(() => {
+      addMessage(messageImage);
+      winnerSound.play();
       scoreBoard.style.display = "none";
       header.innerText = player.name + " WON!";
       header.style.color = player.color;
-      },diceNum*200)
+    }, diceNum * 200);
     reset();
   }
   //it then combines the two arrays to form a combinedMove
-    combinedMove=positionsToMove.concat(path)
+  combinedMove = positionsToMove.concat(path);
 
-//this moves each cell at at time.
-    let delay = 0;
-    combinedMove.forEach((position) => {
-      setTimeout(() => {
-        move(position, playerCh);
-      }, delay);
-      delay += 200;
-    });
+  //this moves each cell at at time.
+  let delay = 0;
+  combinedMove.forEach((position) => {
+    setTimeout(() => {
+      move(position, playerCh);
+    }, delay);
+    delay += 200;
+  });
 
-    player.startingCell = player.destinationCell;
-  
-
-  
+  player.startingCell = player.destinationCell;
 
   player.startingCell = player.destinationCell;
 }
 
-//resets 
+//resets
 function reset() {
   red.startingCell = 0;
   blue.startingCell = 0;
@@ -138,9 +131,8 @@ function reset() {
 }
 
 //play again is clicked
-resetButton.addEventListener('click',(e)=>{
-  e.preventDefault 
-  reset()
-  location.reload()
-}
-   )
+resetButton.addEventListener("click", (e) => {
+  e.preventDefault;
+  reset();
+  location.reload();
+});

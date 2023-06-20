@@ -9,10 +9,9 @@ The object of the game is to get to box 100.
 Each player rolls a dice and moves the amount of positions as the dice shows.
 When player hits a snake, player moves down to the tail of the snake, and when player hits a ladder, player moves up the ladder.
 
-The game is won when player hits 100 EXACTLY. 
+The game is won when player hits 100 EXACTLY.
 
 (script.js is the game setup file.)
-
 
 How this was coded to play;
 
@@ -33,7 +32,7 @@ it moves the character one div at a time to the destination cell in function mov
 Program checks the destination number if it is a snake or a ladder then calls snakes snakesLadder.js which specifies the path of the snake or the ladder.
 
 When player lands on a snake or a ladder, an image is shown and a sound is played. (all defined in array called snakeData in script.js)
-The game continues until one character wins. Character wins only when it  hits 100 exactly . 
+The game continues until one character wins. Character wins only when it hits 100 exactly .
 (e.g if character is on box 99 and dice=6 it will remain on box 99 until it gets a dice =1)
 
 source for Dice images
@@ -44,9 +43,7 @@ PHOTO OF CLOCK
 
 Photo by <a href="https://unsplash.com/@kiranck123?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kiran CK</a> on <a href="https://unsplash.com/images/things/clock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
-
 photo of break time
 
 https://depositphotos.com/111864308/stock-photo-note-with-brake-time-inscription.html
 author: roobcio
-
