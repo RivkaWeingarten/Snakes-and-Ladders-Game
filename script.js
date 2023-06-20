@@ -93,7 +93,7 @@ function createPlayer(color, player) {
 const snakeData = [
   {
     idName: "snake1",
-    imgUrl: "./assets/snake4.png",
+    imgUrl: "./assets/SNAKE4.png",
     alt: "first snake",
     width: "175px",
     height: "155px",
@@ -107,7 +107,7 @@ const snakeData = [
   },
   {
     idName: "snake2",
-    imgUrl: "./assets/snake4.png",
+    imgUrl: "./assets/SNAKE4.png",
     alt: "second snake",
     width: "175px",
     height: "221px",
@@ -121,7 +121,7 @@ const snakeData = [
   },
   {
     idName: "snake3",
-    imgUrl: "./assets/snake4.png",
+    imgUrl: "./assets/SNAKE4.png",
     alt: "third snake",
     width: "165px",
     height: "155px",
@@ -136,7 +136,7 @@ const snakeData = [
 
   {
     idName: "snake4",
-    imgUrl: "assets/snake4.png",
+    imgUrl: "assets/SNAKE4.png",
     alt: "fourth snake",
     width: "125px",
     height: "125px",
