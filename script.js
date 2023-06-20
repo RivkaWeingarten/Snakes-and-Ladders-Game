@@ -9,6 +9,7 @@ const player2Score = document.getElementById("score2");
 const ladderSound=document.getElementById('ohYeah')
 const snakeSound=document.getElementById('ohNo')
 const errorSound=document.getElementById('error')
+const winnerSound=document.getElementById('tada')
 
 resetButton.innerText='Play Again'
 document.body.appendChild(resetButton)
@@ -86,7 +87,7 @@ return playerDot
 const snakeData = [
     {
         idName: "snake1",
-        imgUrl: "assets/snake4.png",
+        imgUrl: "./assets/snake4.png",
         alt:'first snake', 
         width:'175px', 
         height:'155px', 
@@ -101,7 +102,7 @@ const snakeData = [
     },
     {
         idName: "snake2",
-        imgUrl: "assets/snake4.png",
+        imgUrl: "./assets/snake4.png",
         alt:'second snake', 
         width:'175px', 
         height:'221px', 
@@ -115,7 +116,7 @@ const snakeData = [
     },
     {
         idName: "snake3",
-        imgUrl: "assets/snake4.png",
+        imgUrl: "./assets/snake4.png",
         alt:'third snake', 
         width:'165px', 
         height:'155px', 
@@ -145,7 +146,7 @@ const snakeData = [
 
     {
         idName: "ladder1",
-        imgUrl: "assets/ladder transparent.png",
+        imgUrl: "./assets/ladder transparent.png",
         alt:'first ladder', 
         width:'200px', 
         height:'350px', 
@@ -161,7 +162,7 @@ const snakeData = [
  
     {
         idName: "ladder2",
-        imgUrl: "assets/ladder transparent.png",
+        imgUrl: "./assets/ladder transparent.png",
         alt:'second ladder', 
         width:'145px', 
         height:'370px', 
@@ -175,7 +176,7 @@ const snakeData = [
     },
     {
         idName: "ladder3",
-        imgUrl: "assets/ladder transparent.png",
+        imgUrl: "./assets/ladder transparent.png",
         alt:'third ladder', 
         width: '150px',
         height: '321px',
@@ -191,7 +192,7 @@ const snakeData = [
 
     {
         idName: "ladder4",
-        imgUrl: "assets/ladder transparent.png",
+        imgUrl: "./assets/ladder transparent.png",
         alt:'fourth ladder', 
         width:'95px', 
         height:'353px', 

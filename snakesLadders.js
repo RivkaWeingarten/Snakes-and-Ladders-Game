@@ -12,6 +12,8 @@ let timeToWait=(cellNumber.length+diceNum+1)*200
         snakeOrLadder='ladder'
          ladderSound.play()
       }
+     
+        
         
       else{
         snakeOrLadder='snake'

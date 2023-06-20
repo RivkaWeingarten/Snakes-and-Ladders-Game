@@ -90,6 +90,23 @@ function throwdice(player, playerCh) {
     path=[]
     player.score = player.destinationCell;
   }
+
+  //if player wins
+  if (player.destinationCell === 100) {
+   
+   
+    // const winningSound = document.getElementById("tada").play();
+    messageImage = "./assets/winner.png";
+   
+    setTimeout(()=>{
+      addMessage(messageImage)
+      winnerSound.play()
+      scoreBoard.style.display = "none";
+      header.innerText = player.name + " WON!";
+      header.style.color = player.color;
+      },diceNum*200)
+    reset();
+  }
   //it then combines the two arrays to form a combinedMove
     combinedMove=positionsToMove.concat(path)
 
@@ -104,16 +121,7 @@ function throwdice(player, playerCh) {
 
     player.startingCell = player.destinationCell;
   
-//if player wins
-  if (player.destinationCell === 100) {
-    scoreBoard.style.display = "none";
-    header.innerText = player.name + " WON!";
-    header.style.color = player.color;
-    const winningSound = document.getElementById("tada").play();
-    messageUrl = "./assets/winner.png";
-    addMessage(messageUrl);
-    reset();
-  }
+
   
 
   player.startingCell = player.destinationCell;
