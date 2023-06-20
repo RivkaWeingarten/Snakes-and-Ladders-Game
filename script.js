@@ -14,13 +14,8 @@ resetButton.innerText='Play Again'
 document.body.appendChild(resetButton)
 resetButton.style.backgroundColor='blue'
 resetButton.style.color='white'
-resetButton.addEventListener('click',(e)=>{
-   e.preventDefault 
-   reset()
-   location.reload()
-}
-    )
 
+//creates 10 rows. every odd row is set to flex-direction:row-reverse in the css file, to achieve the numbers going in oppsite direction
 rownum = 11
 function addRows() {
     for (let j = 11; j > 1; j--) {
@@ -32,7 +27,7 @@ function addRows() {
         snakesBoard.appendChild(rowcontainer)
     }
 }
-//name boxnumbers from 101 down to get the first div at starter point
+//name boxnumbers from 101 down to get the first div at starter point, every second cell has a different color
 function addCells() {
     boxNum = 101
 
@@ -54,7 +49,7 @@ function addCells() {
         }
     });
 }
-
+//this function adds a snake or a ladder using array snakeData
 function addSnakeLadder(idName, imgUrl, alt, width, height, left, top, rotation) {
     const image1 = document.createElement('img')
     image1.setAttribute('id', idName)
@@ -69,6 +64,7 @@ function addSnakeLadder(idName, imgUrl, alt, width, height, left, top, rotation)
     snakesBoard.appendChild(image1);
     return image1;
 }
+//this function adds two players
 function createPlayer(color,player){
     const homeCell=document.querySelector('#cell1')
     const playerDot=document.createElement('div')

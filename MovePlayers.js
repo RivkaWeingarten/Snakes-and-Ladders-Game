@@ -31,7 +31,7 @@ dice1.addEventListener("click", (e) => {
   removeMessage();
   switchPlayer();
 });
-
+//selects next player
 function switchPlayer() {
   if (playerCh === "player1") {
     playerCh = "player2";
@@ -57,30 +57,32 @@ function move(nextCellNum, playerCh) {
 }
 
 function throwdice(player, playerCh) {
-  let diceNum = Math.floor(Math.random() * 6) + 1;
+  let diceNum = Math.floor(Math.random() * 6) + 1; // rolls dice
 
-  DicePicture(diceNum);
+  DicePicture(diceNum); //calls for dice picture
 
-  player.destinationCell = player.startingCell + diceNum;
+  player.destinationCell = player.startingCell + diceNum; //determines landing cell
  
+  //creates an array of cells that need to be moved e.g. [1,2,3]
   const positionsToMove = [];
   for (let k = player.startingCell + 1; k <= player.destinationCell; k++) {
     positionsToMove.push(k);
       }
-  // player needs EXACTLY 100 to win
+  // checks if landing cell is over 100, then plays error sound
   if (player.destinationCell > 100) {
   error.play()
     return;
   }
 
  
-  // FIND SNAKE OR LADDER (DRY)
+  // checks if SNAKE OR LADDER (DRY) checks snakeData on script.js
   let selectedPoint = snakeData.find(
     (point) => point.pathArray[0] === player.destinationCell
   );
+  //if it is a snake or ladder, it determines pathArray starting cell and destination cell from snakeData
   if (selectedPoint) {
     let { pathArray, destinationCell, messageImage } = selectedPoint;
-    ladderSnake(playerCh, pathArray, messageImage);
+    ladderSnake(pathArray, messageImage,diceNum);
     player.startingCell = destinationCell;
     player.destinationCell = destinationCell;
     path=pathArray
@@ -88,10 +90,10 @@ function throwdice(player, playerCh) {
     path=[]
     player.score = player.destinationCell;
   }
+  //it then combines the two arrays to form a combinedMove
     combinedMove=positionsToMove.concat(path)
 
-   console.log(combinedMove)
-
+//this moves each cell at at time.
     let delay = 0;
     combinedMove.forEach((position) => {
       setTimeout(() => {
@@ -102,7 +104,7 @@ function throwdice(player, playerCh) {
 
     player.startingCell = player.destinationCell;
   
-
+//if player wins
   if (player.destinationCell === 100) {
     scoreBoard.style.display = "none";
     header.innerText = player.name + " WON!";
@@ -112,11 +114,12 @@ function throwdice(player, playerCh) {
     addMessage(messageUrl);
     reset();
   }
-  diceNum = 0;
+  
 
   player.startingCell = player.destinationCell;
 }
 
+//resets 
 function reset() {
   red.startingCell = 0;
   blue.startingCell = 0;
@@ -125,3 +128,11 @@ function reset() {
   diceNum = 0;
   playerCh = "player1";
 }
+
+//play again is clicked
+resetButton.addEventListener('click',(e)=>{
+  e.preventDefault 
+  reset()
+  location.reload()
+}
+   )
