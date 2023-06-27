@@ -47,6 +47,10 @@ function addCells() {
       element.appendChild(div1);
     }
   });
+  const home=document.querySelector('#cell1')
+  home.innerHTML='<i class="fa fa-building-o fa-3x" aria-hidden="true"></i>'
+  const win=document.querySelector('#cell100')
+  win.innerHTML='<i class="fa fa-star-o fa-3x" aria-hidden="true"></i>'
 }
 //this function adds a snake or a ladder using array snakeData
 function addSnakeLadder(
