@@ -6,7 +6,7 @@
 //it then defines destination cell which is starting cell plus the dice number
 //it moves the charachter one div at a time to the destination cell in function move
 //it also checks the destination number if it is a snake or a ladder then calls snakes snakesLadder.js which specifies the path of the snake or the ladder.
-//until one character wins. character wins only when it  hits 100 exactly . (e.g if charachter is on box 99 and dice=6 it will remain on box 99 until it gets a dice =1)
+//until one character wins. character wins only when it  hits 100 exactly . (e.g if character is on box 99 and dice=6 it will remain on box 99 until it gets a dice =1)
 
 let red = {
   name: "RED",
